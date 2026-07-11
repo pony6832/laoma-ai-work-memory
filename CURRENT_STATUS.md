@@ -1,8 +1,8 @@
 # CURRENT STATUS
 
 最後更新：2026-07-12
-更新者：ChatGPT
-狀態：INITIALIZING
+更新者：Codex（HOME-PC）
+狀態：ACTIVE
 
 ## 目前目標
 
@@ -13,25 +13,24 @@
 - 建立私人 Repository：`pony6832/laoma-ai-work-memory`
 - 建立工作記憶索引與安全規則
 - 建立裝置、專案、Codex 與 ChatGPT 交接模板
+- HOME-PC 已 Clone Repository 並完成首次安全環境盤點
+- 建立「老馬 AI 工作記憶系統」專案記憶檔
 
 ## 目前進行中
 
-- 整理已知裝置資料
 - 建立第一批專案記憶
-- 建立 Codex 每次開工與收工流程
+- 依固定 Codex 開工與收工流程持續驗證交接
 
 ## 下一步
 
-1. 在 HOME-PC Clone 此 Repository。
-2. 由 Codex 執行首次裝置盤點，更新 `devices/HOME-PC.md`。
-3. 將現有 GitHub/Codex 專案逐一登錄到 `projects/PROJECT_INDEX.md`。
-4. 每個活躍專案建立獨立資料夾並填寫 `PROJECT_CONTEXT.md`。
+1. 將現有 GitHub/Codex 專案逐一登錄到 `projects/PROJECT_INDEX.md`。
+2. 每個活躍專案建立獨立資料夾並填寫 `PROJECT_CONTEXT.md`。
+3. 在下一台裝置接入時執行相同的安全盤點與交接流程。
 
 ## 阻塞事項
 
-- ChatGPT 目前不能直接控制 HOME-PC 的滑鼠、鍵盤、終端機或磁碟。
-- GitHub 可作為跨裝置記憶中樞；實際電腦盤點需由 HOME-PC 上的 Codex 執行。
+- 尚未盤點其他裝置與建立其餘活躍專案記憶。
 
 ## 最近交接
 
-使用 `prompts/CODEX_START.md` 在 HOME-PC 啟動第一次盤點。完成後使用 `prompts/CODEX_HANDOFF.md` 收工並提交更新。
+HOME-PC 已依 `prompts/CODEX_START.md` 完成首次安全盤點；詳細結果見 `devices/HOME-PC.md` 與 `projects/laoma-ai-work-memory/AI_WORKLOG.md`。
