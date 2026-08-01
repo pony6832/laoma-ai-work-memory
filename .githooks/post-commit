@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+if command -v python >/dev/null 2>&1; then
+  python tools/memory_growth.py harvest || true
+elif command -v py >/dev/null 2>&1; then
+  py -3 tools/memory_growth.py harvest || true
+else
+  echo "找不到 Python；本次略過提交後候選記憶擷取。" >&2
+fi

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "candidate_policy": "local-review-required",
+  "source_of_truth": "git-tracked-markdown",
+  "default_confidence": "OBSERVED",
+  "project_memory_ttl_days": 180,
+  "categories": [
+    "fact",
+    "decision",
+    "pattern",
+    "playbook",
+    "preference",
+    "project"
+  ],
+  "never_store": [
+    "passwords",
+    "api_keys",
+    "tokens",
+    "cookies",
+    "private_keys",
+    "unredacted_personal_data",
+    "unauthorized_company_content"
+  ]
+}

@@ -1,0 +1,9 @@
+
+# MemPalace per-project files (issue #185)
+mempalace.yaml
+entities.json
+
+# Local review queue and runtime state for self-growing memory
+.memory-growth/
+__pycache__/
+*.pyc

@@ -25,3 +25,15 @@
 - EXACT NEXT STEP：逐一登錄其餘 GitHub／Codex 專案，並在下一台授權裝置接入時重複安全盤點流程。
 - COMMIT SHA／PR：本次直接提交至 `main` 並 Push；最終 SHA 以 GitHub／`git log` 查驗。
 - SAFETY：未安裝軟體、未修改系統設定、未掃描整台電腦，亦未讀取或記錄公司內容、帳號、完整路徑、網路識別資訊、憑證或私人資料。
+
+## 2026-08-01 21:39（Asia/Taipei）
+- DEVICE：HOME-PC
+- AGENT：Codex
+- GOAL：將既有工作記憶系統升級為安全、可追溯、具有人工審批閘門的自我生長記憶庫。
+- COMPLETED：建立工作紀錄自動擷取、本機候選佇列、敏感資訊掃描、內容指紋去重、人工批准／拒絕、到期稽核、正式 `knowledge/` 層、Git 提交前安全鉤子與提交後擷取鉤子；更新開工、收工、安全與索引規則。
+- TEST RESULT：4 項單元測試通過；完整性與敏感資訊稽核通過；MemPalace 3.6.0 可用且既有索引為 20 drawers；實際擷取保留 2 筆工作候選並正確排除模板候選。
+- FILES CHANGED：`.githooks/`、`.gitignore`、`SELF_GROWING_MEMORY.md`、`knowledge/README.md`、`memory_growth.json`、`tools/`、`CURRENT_STATUS.md`、`MEMORY_INDEX.md`、`SECURITY_RULES.md`、開工／收工 Prompt 與本專案記憶檔。
+- OPEN PROBLEMS：其他裝置 Clone 後仍需各自執行 `python tools/memory_growth.py install-hooks`；兩筆既有工作候選等待老馬審閱，未自動升格。
+- EXACT NEXT STEP：老馬執行 `python tools/memory_growth.py list`，逐筆使用 `show` 查看後決定 `approve` 或 `reject`。
+- SAFETY：候選資料位於 Git 忽略的 `.memory-growth/`；正式記憶未經人工批准不會同步；未寫入憑證、完整個資或未授權公司內容。
+- COMMIT SHA／PR：本次將直接提交至 `main` 並 Push；最終 SHA 於提交後回填交接回報。

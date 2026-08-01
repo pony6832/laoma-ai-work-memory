@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+
+if command -v python >/dev/null 2>&1; then
+  python tools/memory_growth.py audit --staged
+elif command -v py >/dev/null 2>&1; then
+  py -3 tools/memory_growth.py audit --staged
+else
+  echo "找不到 Python，為保護記憶庫已停止提交。" >&2
+  exit 1
+fi
