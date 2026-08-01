@@ -65,3 +65,19 @@ mempalace sync . --dry-run
 ```
 
 先預覽同步差異；只有在確認刪除與移動結果正確後才套用正式同步。
+
+## 全域 laoma-memory Skill
+
+`skills/laoma-memory/` 是跨設備正式來源。每台 Codex 設備 Pull Repository 後執行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools/install_laoma_memory_skill.ps1
+```
+
+檢查是否與正式來源一致：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools/install_laoma_memory_skill.ps1 -Check
+```
+
+更新既有版本時使用 `-Replace`；安裝器會先保留可復原的時間戳備份。重新啟動 Codex 或開啟新任務後，使用 `$laoma-memory`，或直接說「讀取長期記憶並繼續」。

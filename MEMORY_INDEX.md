@@ -21,6 +21,8 @@
 - `knowledge/`：經人工批准的正式長期記憶。
 - `.memory-growth/`：不進 Git的本機候選與審批狀態。
 - `tools/memory_growth.py`：擷取、去重、敏感資訊掃描、批准、拒絕與過期稽核工具。
+- `skills/laoma-memory/`：可安裝到任意 Codex 設備的全域長期記憶 Skill 正式來源。
+- `tools/install_laoma_memory_skill.ps1`：驗證、備份並安裝／更新全域 Skill。
 
 ## 已知主要工作範圍
 

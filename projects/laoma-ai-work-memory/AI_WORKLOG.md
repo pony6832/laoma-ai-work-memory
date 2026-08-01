@@ -49,3 +49,15 @@
 - EXACT NEXT STEP：繼續登錄活躍專案；日後只批准具有長期價值且已脫敏的候選。
 - SAFETY：未保留兩筆重複候選；未寫入憑證、完整個資或未授權公司內容。
 - COMMIT SHA／PR：本次將直接提交至 `main` 並 Push；最終 SHA 於提交後查驗。
+
+## 2026-08-01 22:05（Asia/Taipei）
+- DEVICE：HOME-PC
+- AGENT：Codex
+- GOAL：建立可從任何 Codex 專案觸發的全域 `laoma-memory` Skill，降低跨設備讀取與交接所需提示。
+- COMPLETED：建立標準 Skill、UI 中繼資料、跨目錄記憶橋接器、MemPalace 搜尋、候選代理命令、新設備說明與安全安裝器；將 canonical Skill 納入 Git 記憶庫。
+- TEST RESULT：Skill 官方驗證通過；5 項橋接器單元測試通過；從非記憶庫工作目錄成功定位 Repository、完成 `git pull --ff-only`、載入受控上下文並搜尋 MemPalace；修正 Unicode wing 名稱解析後搜尋成功。
+- FILES CHANGED：新增 `skills/laoma-memory/` 與 `tools/install_laoma_memory_skill.ps1`；更新索引、操作說明、狀態與本專案記憶檔；HOME-PC 全域 Skill 安裝於 Codex Skills 目錄。
+- OPEN PROBLEMS：Codex 需在新任務或重新啟動後載入新 Skill；其他設備仍需 Pull 後執行安裝器及 `device-setup --mine`。
+- EXACT NEXT STEP：開啟新 Codex 任務，直接說「讀取長期記憶並繼續」驗證隱式觸發；其他設備接入時先執行安裝器的 `-Check`。
+- SAFETY：Skill 只載入受控 Markdown，上下文有字數上限；候選摘要不輸出內容；永久記憶仍需老馬明確批准。
+- COMMIT SHA／PR：本次將直接提交至 `main` 並 Push；最終 SHA 於提交後查驗。

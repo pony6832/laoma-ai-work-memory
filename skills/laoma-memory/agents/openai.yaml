@@ -1,0 +1,4 @@
+interface:
+  display_name: "老馬長期記憶"
+  short_description: "跨設備載入長期工作記憶、延續專案、建立候選並安全交接"
+  default_prompt: "Use $laoma-memory to load my long-term work memory and continue from the latest verified context."
