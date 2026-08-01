@@ -88,6 +88,10 @@ def scan_text(text: str) -> list[dict[str, object]]:
         lowered = line.casefold()
         if any(marker in lowered for marker in SAFE_PLACEHOLDERS):
             continue
+        if re.match(r"^\s*id:\s*['\"]?\d{8}-\d{6}-", line, re.I):
+            # Generated memory IDs start with a timestamp. This is not a
+            # payment-card number separated by hyphens.
+            continue
         for label, pattern in SENSITIVE_PATTERNS:
             if pattern.search(line):
                 findings.append({"type": label, "line": number})

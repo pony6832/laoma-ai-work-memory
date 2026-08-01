@@ -21,14 +21,14 @@
 
 ## 目前進行中
 
-- 審閱第一批由既有工作紀錄產生的候選記憶
+- 自我生長記憶閉環正式運作，目前候選佇列為零
 - 依固定 Codex 開工、收工與記憶審批流程持續驗證跨裝置交接
 
 ## 下一步
 
-1. 執行 `python tools/memory_growth.py list` 審閱第一批候選記憶。
-2. 將現有 GitHub/Codex 專案逐一登錄到 `projects/PROJECT_INDEX.md`。
-3. 每個活躍專案建立獨立資料夾並填寫 `PROJECT_CONTEXT.md`。
+1. 將現有 GitHub/Codex 專案逐一登錄到 `projects/PROJECT_INDEX.md`。
+2. 每個活躍專案建立獨立資料夾並填寫 `PROJECT_CONTEXT.md`。
+3. 每次工作結束後查看新候選，僅批准具有長期價值且已脫敏的內容。
 4. 在 LAPTOP 或其他下一台授權裝置接入時啟用相同的 Git hooks 與候選審批流程。
 
 ## 阻塞事項
@@ -37,4 +37,4 @@
 
 ## 最近交接
 
-HOME-PC 已完成安全自我生長閉環的第一版實作；候選不進 Git，正式記憶必須經人工批准，詳細見 `SELF_GROWING_MEMORY.md`。
+HOME-PC 已完成安全自我生長閉環並處理首批三筆候選：兩筆重複裝置接入紀錄遭拒絕，一筆升級紀錄修正後獲批准；目前候選佇列為零。

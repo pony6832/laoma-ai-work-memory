@@ -61,6 +61,22 @@ class MemoryGrowthTests(unittest.TestCase):
         self.assertEqual(result.returncode, 2)
         self.assertIn("blocked-sensitive", result.stderr)
 
+    def test_memory_id_is_not_mistaken_for_payment_card(self):
+        memory_id = 'id: "' + "20260801" + "-" + "214021" + "-合法記憶-1234abcd\""
+        result = self.run_tool(
+            "capture", "--title", "合法 ID", "--content",
+            memory_id,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_payment_card_like_value_is_blocked(self):
+        value = "4111 " * 3 + "4111"
+        result = self.run_tool(
+            "capture", "--title", "不安全卡號", "--content", "card=" + value,
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("credit-card-like", result.stderr)
+
     def test_harvest_creates_candidate_once(self):
         worklog = self.root / "projects" / "demo" / "AI_WORKLOG.md"
         worklog.write_text(

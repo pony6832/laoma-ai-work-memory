@@ -37,3 +37,15 @@
 - EXACT NEXT STEP：老馬執行 `python tools/memory_growth.py list`，逐筆使用 `show` 查看後決定 `approve` 或 `reject`。
 - SAFETY：候選資料位於 Git 忽略的 `.memory-growth/`；正式記憶未經人工批准不會同步；未寫入憑證、完整個資或未授權公司內容。
 - COMMIT SHA／PR：本次將直接提交至 `main` 並 Push；最終 SHA 於提交後回填交接回報。
+
+## 2026-08-01 21:48（Asia/Taipei）
+- DEVICE：HOME-PC
+- AGENT：Codex
+- GOAL：審閱並處理自我生長記憶庫的首批三筆候選。
+- COMPLETED：拒絕 HOME-PC 與 OFFICE-PC 兩筆已存在於裝置檔及工作紀錄的重複候選；將升級紀錄的 MemPalace 數量修正為 64，移除已過期的待審狀態後，由老馬明確批准為正式記憶。
+- TEST RESULT：候選佇列為零；正式記憶通過敏感資訊、格式與到期稽核。
+- FILES CHANGED：新增一筆 `knowledge/project/` 正式記憶；更新 `CURRENT_STATUS.md`、`NEXT_ACTIONS.md` 與本工作紀錄。
+- OPEN PROBLEMS：無；其他裝置仍需在 Clone 後個別啟用 Git hooks。
+- EXACT NEXT STEP：繼續登錄活躍專案；日後只批准具有長期價值且已脫敏的候選。
+- SAFETY：未保留兩筆重複候選；未寫入憑證、完整個資或未授權公司內容。
+- COMMIT SHA／PR：本次將直接提交至 `main` 並 Push；最終 SHA 於提交後查驗。
